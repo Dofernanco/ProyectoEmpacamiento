@@ -1,32 +1,33 @@
-
+package src;
 
 public class Package{
+    
 	private String name;
 	private String description;
 	private double weight;
 	private int id;
 	
 	public Package(String name,String description,double weight,int id){
-		this.name=name;
-		this.description=description;
-		this.weight=weight;
-		this.id=id;
+		this.name = name;
+		this.description = description;
+		this.weight = weight;
+		this.id = id;
 	}
 	
 	public void setName(String name){
-		this.name=name;
+		this.name = name;
 	}
 	
 	public void setDescription(String description){
-		this.description=description;
+		this.description = description;
 	}
 	
 	public void setWeight(double weight){
-		this.weight=weight;
+		this.weight = weight;
 	}
 	
 	public void setId(int id){
-		this.id=id;
+		this.id = id;
 	}
 	
 	public String getName(){
