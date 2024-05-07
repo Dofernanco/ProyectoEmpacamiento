@@ -1,7 +1,5 @@
 package interfaces;
 
-import exceptions.ElementAlreadyExists;
-
 /**
 * creación de la interfaz BinaryTree, basándonos en los comportamientos comunes de los árboles binarios.
 * @author Angel Zurita
@@ -15,7 +13,7 @@ public interface BinaryTree<E>{
 	* @param element Dato que quieres que tenga el nodo a agregar.
 	* @return true si se agregó con exito, false si no fue así.
 	*/
-	public boolean insert(E element) throws ElementAlreadyExists;
+	public boolean insert(E element);
 	
 	/**
 	* Método que borra un elemento del árbol binario.

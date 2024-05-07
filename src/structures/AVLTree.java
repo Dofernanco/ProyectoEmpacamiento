@@ -1,6 +1,5 @@
 package structures;
 
-import exceptions.ElementAlreadyExists;
 import interfaces.BinaryTree;
 
 import java.lang.Comparable;
@@ -40,7 +39,7 @@ public class AVLTree<E extends Comparable< ? super E>> implements BinaryTree<E>{
 	}
 	
 	@Override
-	public boolean insert(E element) throws ElementAlreadyExists{
+	public boolean insert(E element) {
 		Node<E> tmp;
 		Node<E> tmp2;
 		AVLTree<E> tmp3;
@@ -49,15 +48,13 @@ public class AVLTree<E extends Comparable< ? super E>> implements BinaryTree<E>{
 		}else{
 			tmp=root;
 			while(true){
-				if(element.compareTo(tmp.getData())<0){
+				if(element.compareTo(tmp.getData())<=0){
 					if(tmp.getLeft()!=null){
 						tmp=tmp.getLeft();
 					}else{
 						tmp.setLeft(new Node<E>(element));
 						break;
 					}
-				}else if(element.compareTo(tmp.getData())==0){
-					throw new ElementAlreadyExists("Este elemento ya existe.No se pueden repetir elementos.");
 				}else{
 					if(tmp.getRight()!=null){
 						tmp=tmp.getRight();
