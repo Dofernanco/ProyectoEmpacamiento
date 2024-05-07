@@ -1,8 +1,9 @@
 package src;
 
 import structures.LinkedList;
+import java.lang.Comparable;
 
-public class Van{
+public class Van implements Comparable<Van>{
 	private String id;
 	private LinkedList<Package> packages;
 	private double maxWeight;
@@ -41,6 +42,13 @@ public class Van{
 	
 	public double getMaxWeight(){
 		return maxWeight;
+	}
+	
+	@Override
+	public int compareTo(Van v){
+		Double d1=(Double)(this.maxWeight);
+		Double d2=(Double)(v.maxWeight);
+		return d1.compareTo(d2);
 	}
 	
 	@Override
